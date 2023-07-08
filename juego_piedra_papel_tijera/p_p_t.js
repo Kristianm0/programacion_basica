@@ -4,38 +4,53 @@ let player = 0
 let max = 3
 let min = 1
 
+//Sentences
+let ch_user = "You chose "
+let ch_pc = "Pc chose "
+
+let win_u = "You win"
+let lost_u = "You lost"
+
+let win_pc = "PC win"
+
 function aleatorio(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
-let pc = aleatorio(1, 3)
+    return Math.floor(Math.random() * (max - min + 1) + min)}
+
+
+
+
+
+
+    let pc = aleatorio(1, 3)
+
 
 // ask the values for user
 player = prompt("Chose 1 rock, 2 paper, 3 scissor")
 
 // Conditions
 if(player == 1){
-    alert("You chose rock")
+    alert(ch_user + "rock")
 } else if (player == 2){
-    alert("You chose paper")
+    alert(ch_user + "paper")
 } else if (player == 3){
-    alert("You chose scissor")
+    alert(ch_user +"scissor")
 }
 if(pc == 1){
-    alert("Pc chose rock")
+    alert(ch_pc + "rock")
 } else if (pc == 2){
-    alert("Pc chose paper")
+    alert(ch_pc + "paper")
 } else if (pc == 3){
-    alert("Pc chose scissor")
+    alert(ch_pc + "scissor")
 }
 //battle
 if (pc == player){
     alert("Tie")
 } else if(player == 1 && pc == 3) {
-    alert("You win")
+    alert(win_u)
 } else if (player == 2 && pc == 1) {
-    alert("You win")
+    alert(lost_u)
 } else if (player == 3 && pc == 2) {
-    alert("You win")
+    alert(win_u)
 } else {
-    alert("You Lost")
+    alert(win_pc)
 }
